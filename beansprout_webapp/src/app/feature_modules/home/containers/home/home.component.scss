@@ -1,0 +1,12 @@
+@import '../../../../../styles/styles.scss';
+
+.home-container {
+    // temp
+    border: $test-border;
+    // temp
+    height: 100vh;
+
+    button {
+        background-color: $background_color_light;
+    }
+}

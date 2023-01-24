@@ -1,0 +1,44 @@
+@import '../../../../../styles/styles.scss';
+
+.header {
+    // temp
+    border: $test-border;
+
+    display: flex;
+    justify-content: space-between;
+
+    height: 5vh;
+
+    .header-site-nav {
+        // temp
+        border: $test-border;
+
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        padding: 1em;
+
+        .site-icon-container {
+            .site-icon {
+                height: 2em;
+                width: 2em;
+                object-fit: cover;
+                border-radius: 10vw;
+            }
+        }
+    }
+
+    .header-user-nav {
+        // temp
+        border: $test-border;
+
+        display: flex;
+        padding: 1em;
+
+        .user-nav {
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+        }
+    }
+}
