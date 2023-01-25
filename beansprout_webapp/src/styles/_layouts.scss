@@ -1,5 +1,6 @@
+// ALL TEMP STYLING WHILE BASIC FUNCTIONALITY IN-DEVELOPMENT
+
 .page-container {
-    // temp
     background: $background_color_dark;
 
     display: flex;
@@ -8,7 +9,6 @@
 }
 
 .content-container {
-    // temp
     background: $background_color_med;
 
     max-width: $max-width;
@@ -16,5 +16,9 @@
 }
 
 button {
+    color: black;
+}
+
+input {
     color: black;
 }

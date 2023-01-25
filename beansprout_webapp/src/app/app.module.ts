@@ -6,10 +6,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HomeModule } from './feature_modules/home/home.module';
-import { LayoutModule } from './shared_modules/layout/layout.module';
-import { RegisterModule } from './feature_modules/register/register.module';
-import { LoginModule } from './feature_modules/login/login.module';
+import { HomeModule } from './feature/home/home.module';
+import { LayoutModule } from './shared/modules/layout/layout.module';
+import { RegisterModule } from './feature/register/register.module';
+import { LoginModule } from './feature/login/login.module';
 
 
 @NgModule({
@@ -22,6 +22,7 @@ import { LoginModule } from './feature_modules/login/login.module';
     BrowserModule,
     CommonModule,
     ReactiveFormsModule,
+    
     // Custom Modules
     HomeModule,
     LayoutModule,

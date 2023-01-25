@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './feature_modules/home/containers/home/home.component';
-import { LoginComponent } from './feature_modules/login/containers/login/login.component';
-import { RegisterComponent } from './feature_modules/register/containers/register/register.component';
+import { HomeComponent } from './feature/home/containers/home/home.component';
+import { LoginComponent } from './feature/login/containers/login/login.component';
+import { RegisterComponent } from './feature/register/containers/register/register.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
