@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormControlDirective, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,22 +10,26 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   title: String;
-
-  username: FormControl;
-  password: FormControl;
-  confirmPassword: FormControl;
+  accountRegistrationForm: FormGroup;
 
   constructor(private router: Router) {
-    this.title = 'Register';
+    this.title = 'Account Registration';
 
-    this.username = new FormControl();
-    this.password = new FormControl();
-    this.confirmPassword = new FormControl();
+    // TODO: Update to use FormBuilder service
+    this.accountRegistrationForm = new FormGroup({
+      username: new FormControl(''),
+      password: new FormControl(''),
+      confirmPassword: new FormControl('')
+    });
    }
 
   ngOnInit(): void {
+    
   }
 
-  
+  onSubmit(): void {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.accountRegistrationForm.value);
+  }
 
 }

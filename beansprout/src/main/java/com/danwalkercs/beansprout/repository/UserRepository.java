@@ -1,6 +1,6 @@
-package com.danwalkercs.beansprout.repository.data;
+package com.danwalkercs.beansprout.repository;
 
-import com.danwalkercs.beansprout.entity.data.User;
+import com.danwalkercs.beansprout.data.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

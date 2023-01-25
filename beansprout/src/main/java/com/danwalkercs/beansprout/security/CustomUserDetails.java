@@ -1,8 +1,6 @@
 package com.danwalkercs.beansprout.security;
 
-import com.danwalkercs.beansprout.entity.data.User;
-import com.danwalkercs.beansprout.repository.rel.RelUserRoleRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.danwalkercs.beansprout.data.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,9 +9,6 @@ import java.util.Collection;
 import java.util.List;
 
 public class CustomUserDetails implements UserDetails {
-
-    @Autowired
-    private RelUserRoleRepository relUserRoleRepository;
 
     private final String username;
     private final String password;

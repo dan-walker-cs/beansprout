@@ -1,11 +1,9 @@
-package com.danwalkercs.beansprout.entity.data;
+package com.danwalkercs.beansprout.data;
 
-import com.danwalkercs.beansprout.entity.AbstractDomainEntity;
+import jakarta.persistence.Entity;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.Entity;
 
 @Entity
 @EqualsAndHashCode(callSuper = true)

@@ -1,8 +1,7 @@
 package com.danwalkercs.beansprout.security;
 
-import com.danwalkercs.beansprout.entity.data.RefUserRole;
-import com.danwalkercs.beansprout.entity.data.User;
-import com.danwalkercs.beansprout.repository.data.UserRepository;
+import com.danwalkercs.beansprout.data.User;
+import com.danwalkercs.beansprout.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,15 +9,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
-
-    @Autowired
-    private RelationshipService relationshipService;
 
     @Autowired
     private UserRepository userRepository;
@@ -36,11 +32,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     }
 
     private List<SimpleGrantedAuthority> resolveAuthorities(User user) {
-//        return relationshipService.retrieveAllRolesByUser(user)
-//                .stream()
-//                .map(RefUserRole::getName)
-//                .map(SimpleGrantedAuthority::new)
-//                .collect(Collectors.toList());
-        return new SimpleGrantedAuthority("ADMIN");
+        // TODO: Retrieve all roles by user &
+        return Collections.singletonList(new SimpleGrantedAuthority("ADMIN"));
     }
 }

@@ -1,6 +1,6 @@
 package com.danwalkercs.beansprout.controller.user;
 
-import com.danwalkercs.beansprout.entity.data.User;
+import com.danwalkercs.beansprout.data.User;
 import com.danwalkercs.beansprout.service.user.UserSaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;

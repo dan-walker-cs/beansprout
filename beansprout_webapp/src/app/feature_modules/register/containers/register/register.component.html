@@ -3,20 +3,33 @@
         <app-header></app-header>
         <main class="register-container">
             <div>
-                <!-- TODO: Emit event so .ts can check if p & cp match, 
-                    then call backend to save user -->
-                <form action="#">
-                    <h1>register works!</h1>
+                <h1>Register an Account</h1>
+
+                <!-- TODO: Extract to new component: UserRegistrationComponent -->
+                <!-- Format like this? (1) -->
+                <form
+                    [formGroup]="accountRegistrationForm"
+                    (ngSubmit)="onSubmit()">
+
                     <label for="username">Username:</label>
-                    <input type="text" id="username">
+                    <input type="text" id="username" formControlName="username">
                     <br>
+
                     <label for="password">Password:</label>
-                    <input type="text" id="password">
+                    <!-- Format like this? (2) -->
+                    <input type="text" id="password" formControlName="password">
                     <br>
+
                     <label for="confirmPassword">Confirm Password:</label>
-                    <input type="text" id="confirmPassword">
+                    <!-- Format like this? (3) -->
+                    <input type="text" id="confirmPassword" formControlName="confirmPassword">
                     <br>
-                    <input type="submit" value="Submit">
+
+                    <!-- Format like this? (4) -->
+                    <button type="submit"
+                        [disabled]="!accountRegistrationForm.valid">
+                        Submit
+                    </button>
                 </form>
             </div>
         </main>

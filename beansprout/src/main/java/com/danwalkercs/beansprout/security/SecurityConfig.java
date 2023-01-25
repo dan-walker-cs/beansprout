@@ -1,4 +1,4 @@
-package com.danwalkercs.bean_sprout_recipes.security;
+package com.danwalkercs.beansprout.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -27,10 +27,11 @@ public class SecurityConfig {
 
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        // TODO: Refactor deprecated junk
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeRequests(auth -> {
-                    // add additional endpoint matchers & authorization here
+                    // TODO: add additional endpoint matchers & authorization here
                     auth.anyRequest().authenticated();
                 })
                 .userDetailsService(userDetailsService())

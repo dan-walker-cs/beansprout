@@ -1,12 +1,10 @@
-package com.danwalkercs.beansprout.entity.data;
+package com.danwalkercs.beansprout.data;
 
-import com.danwalkercs.beansprout.entity.AbstractDomainEntity;
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.Entity;
 
 
 @Entity
