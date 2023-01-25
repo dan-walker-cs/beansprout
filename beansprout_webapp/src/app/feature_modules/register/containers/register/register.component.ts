@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // TODO: Use EventEmitter with form value
+    // TODO: Replace with validation & backend call
     console.warn(this.accountRegistrationForm.value);
   }
 

@@ -5,10 +5,10 @@
             <div>
                 <h1>Register an Account</h1>
 
-                <!-- TODO: Extract to new component: UserRegistrationComponent -->
-                <!-- Format like this? (1) -->
-                <form
-                    [formGroup]="accountRegistrationForm"
+                <!-- TODO: 
+                    - Extract to new component: UserRegistrationComponent
+                    - Cull all br tags -->
+                <form [formGroup]="accountRegistrationForm"
                     (ngSubmit)="onSubmit()">
 
                     <label for="username">Username:</label>
@@ -16,16 +16,13 @@
                     <br>
 
                     <label for="password">Password:</label>
-                    <!-- Format like this? (2) -->
                     <input type="text" id="password" formControlName="password">
                     <br>
 
                     <label for="confirmPassword">Confirm Password:</label>
-                    <!-- Format like this? (3) -->
                     <input type="text" id="confirmPassword" formControlName="confirmPassword">
                     <br>
 
-                    <!-- Format like this? (4) -->
                     <button type="submit"
                         [disabled]="!accountRegistrationForm.valid">
                         Submit
