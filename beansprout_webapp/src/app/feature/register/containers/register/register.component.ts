@@ -11,29 +11,10 @@ import { confirmPasswordValidator } from 'src/app/shared/directives/confirm-pass
 })
 export class RegisterComponent implements OnInit {
 
-  title: String;
-  accountRegistrationForm: FormGroup;
+  title: String = 'Account Registration';
 
-  constructor(private router: Router, private fb:FormBuilder) {
-    this.title = 'Account Registration';
-
-    this.accountRegistrationForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required, Validators.minLength(7)],
-      confirmPassword: ['', Validators.required]
-    }), { validators: confirmPasswordValidator };
-   }
+  constructor(private router: Router, private fb:FormBuilder) {}
 
   ngOnInit(): void {
-    
-  }
-
-  onSubmit(): void {
-    if (this.accountRegistrationForm) {
-      console.warn("Do better");
-      return;
-    }
-
-    // call backend & persist user
   }
 }

@@ -4,30 +4,7 @@
         <main class="register-container">
             <div>
                 <h1>Register an Account</h1>
-
-                <!-- TODO: 
-                    - Extract to new component: UserRegistrationComponent
-                    - Cull all br tags -->
-                <form [formGroup]="accountRegistrationForm"
-                    (ngSubmit)="onSubmit()">
-
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" formControlName="username">
-                    <br>
-
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" formControlName="password">
-                    <br>
-
-                    <label for="confirmPassword">Confirm Password:</label>
-                    <input type="password" id="confirmPassword" formControlName="confirmPassword">
-                    <br>
-
-                    <button type="submit"
-                        [disabled]="!accountRegistrationForm.valid">
-                        Submit
-                    </button>
-                </form>
+                <app-account-registration-form></app-account-registration-form>
             </div>
         </main>
         <app-footer></app-footer>

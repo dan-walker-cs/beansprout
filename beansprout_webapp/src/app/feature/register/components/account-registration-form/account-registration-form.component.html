@@ -1,0 +1,23 @@
+<form [formGroup]="accountRegistrationForm" (ngSubmit)="onSubmit()">
+    <!-- TODO: Remove br tags once CSS in place -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+    <small color="white" *ngIf="accountRegistrationForm.controls['password'].hasError('minlength')">
+        Password must be at least 7 characters in length.
+    </small>
+    <br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" formControlName="confirmPassword">
+  
+    <small *ngIf="passwordMismatch">
+        Passwords do not match.
+    </small>
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
